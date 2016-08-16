@@ -8,9 +8,10 @@
 
 ## Available environment variables
 
- * `FLUME_AGENT_NAME` - name of flume agent to run. **Required**
+ * `FLUME_AGENT_NAME` - name of the Flume agent to run. **Required**
  * `FLUME_CONF_FILE` - location of flume configuration file. **Required**
  * `FLUME_CONF_DIR` - directory for flume environment/configuration files. Defaults to `/opt/flume/conf`
+ * `FLUME_LOG_LEVEL` - the log level used by Flume.
 
 ## Example usage
 

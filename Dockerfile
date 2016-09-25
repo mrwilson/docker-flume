@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -q -y --no-install-recommends wget
 
 RUN mkdir /opt/java
 RUN wget --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" -qO- \
-  http://download.oracle.com/otn-pub/java/jdk/8u77-b03/jre-8u77-linux-x64.tar.gz \
+  http://download.oracle.com/otn-pub/java/jdk/8u101-b13/jdk-8u101-linux-x64.tar.gz \
   | tar zxvf - -C /opt/java --strip 1
 
 RUN mkdir /opt/flume

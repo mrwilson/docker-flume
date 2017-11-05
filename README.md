@@ -1,3 +1,5 @@
+[![Docker Build Status](https://img.shields.io/docker/build/probablyfine/flume.svg)]() [![Docker Stars](https://img.shields.io/docker/stars/probablyfine/flume.svg)]()
+
 ## docker-flume
 
   Docker image containing [Apache Flume](https://flume.apache.org/)

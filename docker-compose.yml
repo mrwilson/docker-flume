@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+
+  source:
+    image: flume:latest
+    ports:
+     - "44444:44444"
+    volumes:
+     - ./fixtures/source.conf:/opt/flume-config/flume.conf
+    environment:
+    - FLUME_AGENT_NAME=docker
+    links:
+      - "sink:sink"
+
+  sink:
+    image: flume:latest
+    volumes:
+     - ./fixtures/sink.conf:/opt/flume-config/flume.conf
+     - ./output:/var/tmp/output
+    environment:
+     - FLUME_AGENT_NAME=docker

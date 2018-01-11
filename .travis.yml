@@ -4,4 +4,7 @@ services:
   - docker
 
 script:
-  - docker build -t probablyfine/flume .
+  - docker build -t .
+
+after_script:
+  - ./run-integration-test.sh

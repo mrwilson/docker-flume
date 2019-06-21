@@ -1,6 +1,7 @@
 #!/bin/bash
 
 FLUME_CONF_DIR=/opt/flume-config
+FLUME_LOG_LEVEL=${FLUME_LOG_LEVEL:-INFO}
 
 [[ -d "${FLUME_CONF_DIR}"  ]]  || { echo "Flume config file not mounted in /opt/flume-config";  exit 1; }
 [[ -z "${FLUME_AGENT_NAME}" ]] && { echo "FLUME_AGENT_NAME required"; exit 1; }
@@ -11,5 +12,5 @@ flume-ng agent \
   -c ${FLUME_CONF_DIR} \
   -f ${FLUME_CONF_DIR}/flume.conf \
   -n ${FLUME_AGENT_NAME} \
-  -Dflume.root.logger=INFO,console
+  -Dflume.root.logger=${FLUME_LOG_LEVEL},console
 

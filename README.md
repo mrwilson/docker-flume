@@ -6,11 +6,17 @@
 
   Self-contained Docker image containing Java and [Apache Flume](https://flume.apache.org/)
 
+## Environment variables
+
+ * `FLUME_AGENT_NAME` - name of the Flume agent to run. **Required**
+ * `FLUME_LOG_LEVEL` - the log level used by Flume.
+
 ## Usage
 
     $ docker pull probablyfine/flume
     $ docker run \
       --env FLUME_AGENT_NAME=docker \
+      --env FLUME_LOG_LEVEL=INFO \
       --volume /tmp/config.conf:/opt/flume-config/flume.conf \
       --detach \
       probablyfine/flume:latest
